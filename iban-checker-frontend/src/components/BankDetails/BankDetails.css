@@ -1,0 +1,60 @@
+.result {
+  margin-top: 2.4rem;
+  padding: 1.6rem;
+  border: 1px solid var(--color-mid-text);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-light-background);
+}
+
+.result h3 {
+  font-size: var(--font-size-h3);
+  color: var(--color-dark-text);
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.result table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.6rem;
+}
+
+.result td {
+  padding: 0.8rem;
+  font-size: var(--font-size-p);
+  text-align: left;
+}
+
+.icon-success {
+  color: green;
+  margin-left: 0.5rem;
+}
+
+.icon-error {
+  color: red;
+  margin-left: 0.5rem;
+}
+
+.bank-details {
+  margin-top: 1.6rem;
+}
+
+.bank-details h4 {
+  font-size: var(--font-size-h3);
+  color: var(--color-dark-text);
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.bank-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bank-details td {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
+  font-size: var(--font-size-p);
+  text-align: left;
+}

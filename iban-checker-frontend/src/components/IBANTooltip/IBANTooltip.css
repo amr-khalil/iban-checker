@@ -1,0 +1,33 @@
+.info-button {
+  position: relative;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.info-tooltip {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-small);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 10;
+}
+
+.info-button:hover .info-tooltip {
+  display: block;
+}
+
+.info-tooltip table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-tooltip th,
+.info-tooltip td {
+  padding: 0.5rem;
+  border: 1px solid var(--color-mid-text);
+  text-align: left;
+}

@@ -1,0 +1,70 @@
+/* Variables */
+:root {
+  --font-size-base: 62.5%; /* 1rem = 10px */
+  --font-size-body: 1.6rem; /* 16px */
+  --font-size-h1: 5rem;
+  --font-size-h2: 3.8rem;
+  --font-size-h3: 1.8rem;
+  --font-size-p: 1.6rem;
+  --font-family-primary: "Inter", sans-serif;
+  --font-family-heading: "Caprasimo", cursive;
+  --color-background: #eee;
+  --color-primary: #16191e;
+  --color-secondary: #ec0016;
+  --color-light-text: #e8ebe6;
+  --color-dark-text: #0e0f0c;
+  --color-mid-text: #454745;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --border-radius-small: 0.8rem;
+  --border-radius-large: 3.2rem;
+  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  background-color: var(--color-background);
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+  padding: 0 1.6rem;
+  text-align: center;
+}
+
+.top-background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55vh;
+  background-color: var(--color-primary);
+  z-index: -1;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: 100%;
+  background-color: var(--color-white);
+  padding: 2.4rem;
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+}
