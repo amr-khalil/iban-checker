@@ -64,7 +64,7 @@ class IbanServiceTest {
         assertTrue(response.isValid());
         assertEquals(bankDetails, response.getBankDetails());
         System.out.println(response.getBankDetails());
-        assertEquals(iban, response.getIban());
+        assertEquals(normalizedIban, response.getIban());
 
         verify(bankDetailsRepository, times(1)).findById(bankIdentifier);
     }

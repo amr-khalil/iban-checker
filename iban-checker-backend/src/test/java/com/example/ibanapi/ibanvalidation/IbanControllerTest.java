@@ -73,7 +73,7 @@ class IbanControllerTest {
                 // Arrange
                 when(ibanService.validateIban(any(String.class)))
                                 .thenThrow(new InvalidIbanEmptyException(
-                                                IbanValidationErrorEnum.INVALID_LENGTH.getMessage()));
+                                                IbanValidationErrorEnum.INVALID_EMPTY.getMessage()));
 
                 // Act & Assert
                 mockMvc.perform(post("/api/iban/validate")
@@ -82,9 +82,9 @@ class IbanControllerTest {
                                 .andExpect(status().isBadRequest())
                                 .andExpect(content().json(
                                                 "{\"status\":\"error\",\"errorType\":\""
-                                                                + IbanValidationErrorEnum.INVALID_LENGTH.name()
+                                                                + IbanValidationErrorEnum.INVALID_EMPTY.name()
                                                                 + "\",\"message\":\""
-                                                                + IbanValidationErrorEnum.INVALID_LENGTH.getMessage()
+                                                                + IbanValidationErrorEnum.INVALID_EMPTY.getMessage()
                                                                 + "\"}"));
         }
 
