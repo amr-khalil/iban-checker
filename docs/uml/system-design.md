@@ -1,10 +1,4 @@
 ```mermaid
----
-config:
-  look: classic
-  theme: default
-  layout: dagre
----
 flowchart TD
  subgraph Frontend["Frontend"]
         React["React"]
