@@ -22,11 +22,12 @@ This project demonstrates a complete end-to-end pipeline: from handling user inp
    2.6. [Observability Stack (Prometheus, Grafana, Loki, Tempo)](#observability-stack-prometheus-grafana-loki-tempo)
 
 3. [Installation & Usage](#installation--usage)  
-   3.1. [Prerequisites](#prerequisites)  
-   3.2. [Setup Instructions](#setup-instructions)  
-   3.3. [Running the Application](#running-the-application)  
-   3.4. [Testing & Load Testing](#testing--load-testing)  
-   3.5. [Cleanup](#cleanup)
+   3.1. [Deployment](#deployment)  
+   3.2. [Prerequisites (Optional)](#prerequisites-optional)  
+   3.3. [Setup Instructions (Optional)](#setup-instructions-optional)  
+   3.4. [Running the Application](#running-the-application)  
+   3.5. [Load Test](#load-testing)  
+   3.6. [Cleanup](#cleanup)
 
 4. [Demo Frontend](#demo-frontend)
 
@@ -101,16 +102,35 @@ The class diagram provides a conceptual view of the backend code structure, incl
 
 ---
 
-## Installation & Usage
+## Deployment & Installation
 
-### Prerequisites
+### Deployment
+
+**Frontend React:**
+
+- http://172.105.69.35
+
+**Backend Spring Boot:**
+
+- http://172.105.69.35:8888/docs # Nginx
+- http://172.105.69.35:8080/docs # Server a
+- http://172.105.69.35:8081/docs # Server b
+- http://172.105.69.35:8082/docs # Server c
+
+**Observability Grafana, Loki, Tempo:**
+
+- http://172.105.69.35:3000  
+  Username: `admin`  
+  Password: `admin`
+
+### Prerequisites (Optional)
 
 - **Docker & Docker Compose:**  
   Install Docker and Docker Compose on your system.
 - **k6 (optional):**  
   For load testing, install [k6](https://k6.io/).
 
-### Setup Instructions
+### Setup Instructions (Optional)
 
 1. **Install Docker:**  
    Refer to the [Docker website](https://docs.docker.com/get-docker/) for installation steps.
@@ -129,6 +149,8 @@ The class diagram provides a conceptual view of the backend code structure, incl
    ```bash
    sudo docker-compose up --build
    ```
+
+### Load Testing
 
 5. Send requests with **curl** to the Nginx to Spring Boot REST API
 
@@ -156,6 +178,8 @@ The class diagram provides a conceptual view of the backend code structure, incl
    - ibanapi-c: [http://localhost:8082/docs](http://localhost:8082/docs)
 
 7. Check predefined dashboard `IBAN Checker Observability` on Grafana [http://localhost:4000/](http://localhost:4000/) and login with default account `admin` and password `admin`
+
+### Cleanup
 
 8. Clean Resources
 

@@ -13,8 +13,12 @@ import { sleep } from "k6";
  * Default function executed by k6.
  * Sends HTTP POST requests to validate a list of IBANs.
  */
+const host = "http://172.105.69.35"; //"http://localhost";
+const port = "8888";
+const endpoint = "/api/iban/validate";
+const url = `${host}:${port}${endpoint}`;
+
 export default function () {
-  const url = "http://localhost:80/api/iban/validate";
   const headers = { "Content-Type": "application/json" };
 
   const ibans = [

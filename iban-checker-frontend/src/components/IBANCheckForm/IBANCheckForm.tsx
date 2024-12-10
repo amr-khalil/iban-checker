@@ -39,6 +39,9 @@ const IBANCheckForm: React.FC = () => {
   );
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const IBAN_API_HOST: string = "http://172.105.69.35";
+  const IBAN_API_PORT: string = "8888";
+  const IBAN_API_URL: string = `${IBAN_API_HOST}:${IBAN_API_PORT}/api/iban/validate`;
 
   const handleCheckIBAN = async () => {
     setLoading(true);
@@ -47,7 +50,9 @@ const IBANCheckForm: React.FC = () => {
     try {
       const response = await axios.post<
         IBANValidationSuccessResponse | IBANValidationErrorResponse
-      >("http://localhost:80/api/iban/validate", { iban });
+      >(IBAN_API_URL, {
+        iban,
+      });
       if (response.data.status === "error") {
         const errorResponse = response.data as IBANValidationErrorResponse;
         setError(errorResponse.message);
