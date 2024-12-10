@@ -18,10 +18,8 @@ This project demonstrates a complete end-to-end pipeline: from handling user inp
    2.2. [Backend (Spring Boot)](#backend-spring-boot)  
    2.3. [Database (PostgreSQL)](#database-postgresql)  
    2.4. [Caching (Redis)](#caching-redis)  
-   2.5. [Load Balancing & Reverse Proxy (Nginx)](#load-balancing--reverse-proxy-nginx)  
-   2.6. [Observability Stack (Prometheus, Grafana, Loki, Tempo)](#observability-stack-prometheus-grafana-loki-tempo)
-
-3. [Installation & Usage](#installation--usage)  
+   2.5. [Load Balancing & Reverse Proxy (Nginx)](#load-balancing--reverse-proxy-nginx)
+3. [Deployment & Installation](#deployment--installation)  
    3.1. [Deployment](#deployment)  
    3.2. [Prerequisites (Optional)](#prerequisites-optional)  
    3.3. [Setup Instructions (Optional)](#setup-instructions-optional)  
